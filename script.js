@@ -42,7 +42,7 @@ let rabbit = {
  */
 
 function reverseLoop(){
-    for (i = rabbit.length; i >= 0; i--){
+    for (i = rabbit.predators.length-1; i >= 0; i--){
         console.log(rabbit.predators[i])
     }
 };
