@@ -17,23 +17,23 @@
  * * -1 or more booleans
  */
 
-let rabbit = [
-    scientificName = "Oryctolagus cuniculus",
-    approxWeightInKg = 3,
-    covering = "rabbit fur",
-    minimumLengthInCm = 20,
-    diet = "omnivore",
-    predators = ["owls", "hawks", "eagles", "falcons", "wild dogs"],
-    food = ["Bell peppers", "Bok choy", "Brussels sprouts", "Carrot tops"],
-    maleRabbitIsDoe = false,
-    lifeSpanInYears = 9,
-    layEggs = false,
-    sourceReference = "https://www.livescience.com/28162-rabbits.html#:~:text=Rabbits%20are%20small%20mammals%20with,whiskers%20and%20distinctive%20long%20ears.&text=Rabbits%20and%20hares%20are%20in,Lepus%3B%20all%20others%20are%20rabbits.",
-];
+let rabbit = {
+    scientificName : "Oryctolagus cuniculus",
+    approxWeightInKg : 3,
+    covering : "rabbit fur",
+    minimumLengthInCm :20,
+    diet : "omnivore",
+    predators : ["owls", "hawks", "eagles", "falcons", "wild dogs"],
+    food : "Bell peppers",
+    maleRabbitIsDoe : false,
+    lifeSpanInYears : 9,
+    layEggs : false,
+    sourceReference:"https://www.livescience.com/28162-rabbits.html#:~:text=Rabbits%20are%20small%20mammals%20with,whiskers%20and%20distinctive%20long%20ears.&text=Rabbits%20and%20hares%20are%20in,Lepus%3B%20all%20others%20are%20rabbits.",
+};
 
-function()
-
-
+(() => {
+    return rabbit;
+})();
 
 /**
  * * Q2. 20 marks
@@ -41,13 +41,12 @@ function()
  * * loops backwards through the array in the object console logging each time. 
  */
 
-
-
-
-
-
-
-
+function reverseLoop(){
+    for (i = rabbit.length; i >= 0; i--){
+        console.log(rabbit.predators[i])
+    }
+};
+reverseLoop();
 
 
 
@@ -58,6 +57,10 @@ function()
  * * Ensure that your function is a single line.
  */
 
+let singleLineString = (object) => {
+    console.log(`The ${object.scientificName} lives in ${object.habitat} and has a covering of ${object.covering}.`);
+}
+singleLineString(rabbit);
 
 
 
